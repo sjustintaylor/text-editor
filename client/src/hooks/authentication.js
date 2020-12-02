@@ -1,6 +1,5 @@
 import { useState } from "react";
 import jwt_decode from "jwt-decode";
-import compareAsc from "date-fns/compareAsc";
 import { open } from "api/editorApi";
 
 export default () => {
@@ -23,6 +22,8 @@ export default () => {
       console.error(error);
     }
   };
+
+  // Add a timeout to refresh the token every x minutes (set by token expiry) by call this
   const refreshToken = async () => {
     try {
       const { data: token } = await open.post("/sessions/refresh");
@@ -31,20 +32,20 @@ export default () => {
       console.error(error);
     }
   };
-  /**
-   * Checks if a token is valid for use
-   * @returns Boolean
-   */
-  const validToken = () => {
-    if (
-      !token ||
-      !loggedIn ||
-      compareAsc(new Date(decodedToken.exp), new Date()) <= 0
-    ) {
-      return false;
-    }
-    return true;
-  };
+  // /**
+  //  * Checks if a token is valid for use
+  //  * @returns Boolean
+  //  */
+  // const validToken = () => {
+  //   if (
+  //     !token ||
+  //     !loggedIn ||
+  //     compareAsc(new Date(decodedToken.exp), new Date()) <= 0
+  //   ) {
+  //     return false;
+  //   }
+  //   return true;
+  // };
   return {
     loggedIn,
     token,

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { token, validToken, refreshToken } from "hooks/authentication";
+import { token } from "hooks/authentication";
 
 const open = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
@@ -17,14 +17,7 @@ const secure = axios.create({
 
 secure.interceptors.request.use(
   async (config) => {
-    let currentToken;
-    if (token && validToken()) {
-      currentToken = token;
-    } else {
-      // Token not present, or expired, attempt to refresh
-      currentToken = refreshToken();
-    }
-    config.headers.Authorization = `Bearer ${currentToken}`;
+    config.headers.Authorization = `Bearer ${token}`;
     return config;
   },
   (error) => {
