@@ -1,13 +1,13 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Test from "features/test";
-import Authorization from "features/authorization";
+import landingPage from "features/landing-page";
+import authorization from "features/authorization";
 
 export default () => {
   return (
     <Switch>
-      <Route exact path="/" component={Test} />
-      <Route exact path="/authorization" component={Authorization} />
+      <Route exact path="/" component={landingPage} />
+      <Route exact path="/app/authorization" component={authorization} />
     </Switch>
   );
 };

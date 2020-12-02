@@ -15,7 +15,7 @@ export default ({ component: Component, ...rest }) => {
           return (
             <Redirect
               to={{
-                pathname: "/authorization",
+                pathname: "/app/authorization",
                 state: {
                   from: props.location,
                 },
