@@ -1,1 +1,1 @@
-export { default } from "./files";
+export { default } from "./Files";
