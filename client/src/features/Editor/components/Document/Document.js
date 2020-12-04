@@ -18,7 +18,7 @@ export default () => {
         fontSize={18}
         showPrintMargin={false}
         showGutter={false}
-        highlightActiveLine={false}
+        highlightActiveLine={true}
         value={document}
         setOptions={{
           enableBasicAutocompletion: true,
@@ -28,6 +28,7 @@ export default () => {
           tabSize: 2,
           wrap: true,
           wrapBehavioursEnabled: true,
+          fontFamily: "'Cutive Mono', monospace",
         }}
       />
     </div>
