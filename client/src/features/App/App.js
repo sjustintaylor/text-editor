@@ -1,5 +1,5 @@
 import React from "react";
-import Router from "features/router";
+import Router from "features/Router";
 function App() {
   return (
     <div>

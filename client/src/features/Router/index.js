@@ -1,9 +1,9 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import LandingPage from "features/landing-page";
-import Authorization from "features/authorization";
+import LandingPage from "features/Landing-Page";
+import Authorization from "features/Authorization";
 import ProtectedRoute from "./protected-route";
-import Editor from "features/editor/Editor";
+import Editor from "features/Editor/Editor";
 
 export default () => {
   return (
