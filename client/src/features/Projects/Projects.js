@@ -57,7 +57,8 @@ export default () => {
       )}
       <Dialog
         intent="none"
-        hasHeader={false}
+        hasHeader={true}
+        title="Create a new project"
         isShown={showDialog}
         onCloseComplete={() => setShowDialog(false)}
         onConfirm={() => {
