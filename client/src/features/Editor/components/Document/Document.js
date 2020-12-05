@@ -3,13 +3,15 @@ import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-markdown";
 import "ace-builds/src-noconflict/theme-textmate";
 import "ace-builds/src-min-noconflict/ext-searchbox";
+import "ace-builds/src-min-noconflict/ext-language_tools";
 import useHooks from "./hooks";
 
 export default () => {
   const { document, setDocument } = useHooks();
   return (
-    <div className="bg-white h-screen w-full p-3 pt-5 flex flex-col items-center">
+    <div className="bg-white  w-full max-w-2xl p-3 m-5 mt-3 mb-3 flex flex-col items-center rounded-md shadow box-border">
       <AceEditor
+        style={{ width: "100%" }}
         mode="markdown"
         theme="textmate"
         name="document"
@@ -18,8 +20,9 @@ export default () => {
         fontSize={18}
         showPrintMargin={false}
         showGutter={false}
-        highlightActiveLine={true}
+        highlightActiveLine={false}
         value={document}
+        height="100%"
         setOptions={{
           enableBasicAutocompletion: true,
           enableLiveAutocompletion: false,
