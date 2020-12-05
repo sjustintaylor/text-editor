@@ -1,5 +1,8 @@
 // import { useEffect } from "react";
 
+import { useState } from "react";
+
 export default () => {
-  return {};
+  const [currentDocument, setCurrentDocument] = useState(null);
+  return { currentDocument, setCurrentDocument };
 };
