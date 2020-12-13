@@ -4,10 +4,8 @@ import "ace-builds/src-noconflict/mode-markdown";
 import "ace-builds/src-noconflict/theme-textmate";
 import "ace-builds/src-min-noconflict/ext-searchbox";
 import "ace-builds/src-min-noconflict/ext-language_tools";
-import useHooks from "./hooks";
 
-export default () => {
-  const { document, setDocument } = useHooks();
+export default ({ setDocument }) => {
   return (
     <div className="bg-white  w-full max-w-2xl p-3 m-5 mt-3 mb-3 flex flex-col items-center rounded-md shadow box-border">
       <AceEditor

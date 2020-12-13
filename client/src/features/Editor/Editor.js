@@ -6,11 +6,21 @@ import useHooks from "./hooks";
 import "./styles.scss";
 
 export default () => {
-  const { currentDocument, setCurrentDocument } = useHooks();
+  const {
+    currentDocument,
+    setCurrentDocument,
+    notes,
+    files,
+    error,
+    loading,
+  } = useHooks();
   return (
     <div className="flex flex-row flex-nowrap place-content-between h-screen w-screen bg-gray-200">
       <Files setCurrentDocument={setCurrentDocument} />
-      <Document currentDocument={currentDocument} />
+      <Document
+        currentDocument={currentDocument}
+        setCurrentDocument={setCurrentDocument}
+      />
       <Notes />
     </div>
   );

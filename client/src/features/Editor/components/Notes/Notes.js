@@ -1,10 +1,8 @@
 import { Alert, Spinner, AddIcon, Button } from "evergreen-ui";
 import React from "react";
 import NoteCard from "../NoteCard";
-import useHooks from "./hooks";
 
 export default () => {
-  const { error, loading, notes, saveNote, deleteNote } = useHooks();
   return (
     <div className="w-full max-w-sm  flex flex-col justify-items-center place-items-center pt-3 mb-3 overflow-y-auto">
       {error && (

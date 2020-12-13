@@ -3,7 +3,6 @@ import {
   IconButton,
   DragHandleVerticalIcon,
   Button,
-  Textarea,
 } from "evergreen-ui";
 import React from "react";
 import AceEditor from "react-ace";
